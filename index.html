@@ -7,6 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RPG text game</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -70,13 +73,16 @@
         </section>
         <section class="panel log">
             <h2>Журнал событий</h2>
-            <div class="log-entry location-log" id="log-content">
-                Добро пожаловать в мир приключений!
-                Вы стоите у входа в таинственный лес.
+            <div class="log-content" id="log-content">
+                <div class="log-entry location-log">
+                    Добро пожаловать в мир приключений!
+                    Вы стоите у входа в таинственный лес.
+                </div>
+                <button class="reset-btn" id="reset-btn">
+                    Сбросить игру
+                </button>
             </div>
-            <button class="reset-btn" id="reset-btn">
-                Сбросить игру
-            </button>
         </section>
+
 </body>
 </html>

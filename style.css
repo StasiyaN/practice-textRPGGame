@@ -1,5 +1,246 @@
-section {
-    border: 1px solid black;
-    margin: 5px;
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Lexend", sans-serif;
+}
+
+body{
+    background: #114357;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F29492, #114357);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F29492, #114357); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    gap: 20px;
+    grid-template-areas:
+                "header header"
+                "stats location"
+                "actions log";
+
+}
+
+header{
+    grid-area: header;
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    opacity: 0.5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+h1{
+    font-size: 40px;
+    text-align: center;
+    color: rgba(159, 119, 148, 0.89);
+}
+
+.panel{
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.stats {
+    grid-area: stats;
+}
+
+.location{
+    grid-area: location;
+}
+.actions{
+    grid-area: actions;
+}
+
+.log{
+    grid-area: log;
+}
+
+h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e8b9da;
+    padding-bottom: 5px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: rgb(197, 159, 188);
+    border-radius: 5px;
+}
+
+.stat-name {
+    font-weight: bold;
+    color: black;
+}
+
+.stat-value {
+    color: rgb(58, 5, 47);
+}
+
+.inventory {
+    margin-top: 20px;
+}
+
+.inventory-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/*todo: css for items*/
+.location-desc {
+    margin-bottom: 30px;
+}
+
+.location-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+button {
+    background: #FBD3E9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+    scale: 1.05;
+}
+
+ .reset-btn {
+    background: red;
+}
+
+.log-content {
+    height: 300px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.log-entry {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.combat-log {
+    color: #ff6666;
+}
+
+.item-log {
+    color: #66ff66;
+}
+
+.location-log {
+    color: #66ccff;
+}
+
+.enemy {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.enemy-info {
+    flex-grow: 1;
+}
+
+.enemy-health {
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.enemy-health-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #ff9900);
+    width: 100%;
+    transition: width 0.5s ease;
+}
+
+.enemy {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 15px;
+    padding: 15px;
+    background: rgba(255, 0, 0, 0.2);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+}
+
+.enemy-info {
+    flex-grow: 1;
+}
+
+.enemy-health {
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.enemy-health-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #ff0000, #00ff48);
+    width: 100%;
+    transition: width 0.5s ease;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #333;
+    border-radius: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00cc00, #66ff66);
+    transition: width 0.5s ease;
 }
 
