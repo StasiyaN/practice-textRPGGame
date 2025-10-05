@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -20,27 +21,27 @@
             <h2>Персонаж</h2>
             <div class="stat-row">
                 <span class ="stat-name">Имя</span>
-                <span class="stat-value" id="char-name">Искатель приключений</span>
+                <span class="stat-value" id="char-name"></span>
             </div>
             <div class="stat-row">
                 <span class="stat-name">Здоровье</span>
-                <span class="stat-value" id="char-health">100/100</span>
+                <span class="stat-value" id="char-health"></span>
             </div>
             <div class="stat-row">
                 <span class="stat-name">Сила</span>
-                <span class="stat-value" id="char-strength">10</span>
+                <span class="stat-value" id="char-strength"></span>
             </div>
             <div class="stat-row">
                 <span class="stat-name">Защита</span>
-                <span class="stat-value" id="char-defence">5</span>
+                <span class="stat-value" id="char-defence"></span>
             </div>
             <div class="stat-row">
                 <span class="stat-name">Уровень</span>
-                <span class="stat-value" id="char-level">1</span>
+                <span class="stat-value" id="char-level"></span>
             </div>
             <div class="stat-row">
                 <span class="stat-name">Опыт</span>
-                <span class="stat-value" id="char-exp">0/100</span>
+                <span class="stat-value" id="char-exp"></span>
             </div>
             <div class="progress-bar">
                 <div class="progress-bar-fill" id="exp-bar"></div>
@@ -55,14 +56,14 @@
         <section class="panel location">
             <h2>Локация</h2>
             <div class="location-desc">
-                Вы стоите на опушке таинственного леса. Деревья здесь высокие и древние,
-                а воздух наполнен запахом хвои и чего-то неизведанного.
+                Вы стоите у входа в таинственный мир приключений...
             </div>
             <div class="location-actions" id="location-actions">
-                <button>Идти вглубь леса</button>
-                <button>Исследовать старую хижину</button>
+                <!-- Кнопки действий для локации будут добавляться сюда -->
             </div>
-            <div id="enemy-container"></div>
+            <div id="enemy-container">
+                <!-- Враг будет отображаться здесь при встрече -->
+            </div>
         </section>
         <section class="panel actions">
             <h2>Действия</h2>
@@ -83,6 +84,5 @@
                 </button>
             </div>
         </section>
-
 </body>
 </html>
