@@ -198,7 +198,7 @@ button:hover {
 
 .enemy-health-bar {
     height: 100%;
-    background: linear-gradient(90deg, #ff0000, #ff9900);
+    background: linear-gradient(90deg, #ff0000, #00ff22);
     width: 100%;
     transition: width 0.5s ease;
 }
@@ -256,8 +256,7 @@ button:hover {
                     "stats"
                     "location"
                     "actions"
-                    "log"
-                    "footer";
+                    "log";
     }
 }
 
@@ -270,7 +269,6 @@ button:hover {
 
 @media (max-width: 320px) {
     .container {
-        max-width: 320px;
-
+        max-width: 400px;
     }
 }
