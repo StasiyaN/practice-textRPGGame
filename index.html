@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>RPG text game</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,39 +13,38 @@
         <header>
             <h1>RPG Game</h1>
         </header>
-
         <section class = "panel stats">
             <h2>Персонаж</h2>
             <div class="stat-row">
                 <span class ="stat-name">Имя</span>
-                <span class="stat-value"></span>
+                <span class="stat-value" id="char-name">Искатель приключений</span>
             </div>
             <div class="stat-row">
-                <span class="stat-name"> Здоровье</span>
-                <span class="stat-value"></span>
+                <span class="stat-name">Здоровье</span>
+                <span class="stat-value" id="char-health">100/100</span>
             </div>
             <div class="stat-row">
-                <span class="stat-name"> Сила</span>
-                <span class="stat-value"></span>
+                <span class="stat-name">Сила</span>
+                <span class="stat-value" id="char-strength">10</span>
             </div>
             <div class="stat-row">
-                <span class="stat-name"> Защита</span>
-                <span class="stat-value"></span>
+                <span class="stat-name">Защита</span>
+                <span class="stat-value" id="char-defence">5</span>
             </div>
             <div class="stat-row">
-                <span class="stat-name"> Уровень</span>
-                <span class="stat-value"></span>
+                <span class="stat-name">Уровень</span>
+                <span class="stat-value" id="char-level">1</span>
             </div>
             <div class="stat-row">
-                <span class="stat-name"> Опыт</span>
-                <span class="stat-value"></span>
+                <span class="stat-name">Опыт</span>
+                <span class="stat-value" id="char-exp">0/100</span>
             </div>
             <div class="progress-bar">
-
+                <div class="progress-bar-fill" id="exp-bar"></div>
             </div>
             <div class="inventory">
                 <h2> Инвентарь </h2>
-                <div class="inventory-items">
+                <div class="inventory-items" id="inventory">
                     <p>Инвентарь пуст</p>
                 </div>
             </div>
@@ -56,27 +55,26 @@
                 Вы стоите на опушке таинственного леса. Деревья здесь высокие и древние,
                 а воздух наполнен запахом хвои и чего-то неизведанного.
             </div>
-            <div class="location-actions">
+            <div class="location-actions" id="location-actions">
                 <button>Идти вглубь леса</button>
                 <button>Исследовать старую хижину</button>
             </div>
-            <div class="enemy-container">
-
-            </div>
+            <div id="enemy-container"></div>
         </section>
         <section class="panel actions">
             <h2>Действия</h2>
-            <div class="action-buttons">
+            <div class="action-buttons" id="action-buttons">
                 <button>Искать предметы</button>
                 <button>Отдохнуть</button>
             </div>
         </section>
         <section class="panel log">
             <h2>Журнал событий</h2>
-            <div class="log-entry">
-                Добро пожаловать в мир приключений! Вы стоите у входа в таинственный лес.
+            <div class="log-entry location-log" id="log-content">
+                Добро пожаловать в мир приключений!
+                Вы стоите у входа в таинственный лес.
             </div>
-            <button class="reset-btn">
+            <button class="reset-btn" id="reset-btn">
                 Сбросить игру
             </button>
         </section>
