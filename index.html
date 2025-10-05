@@ -10,45 +10,75 @@
 </head>
 <body>
     <div class="container">
-        <h1>RPG Game</h1>
-        <div class = "panel">
+        <header>
+            <h1>RPG Game</h1>
+        </header>
+
+        <section class = "panel stats">
             <h2>Персонаж</h2>
-            <div class="stat-item">
-                <span class ="stat-label">Имя</span>
+            <div class="stat-row">
+                <span class ="stat-name">Имя</span>
                 <span class="stat-value"></span>
             </div>
-            <div class="stat-item">
-                <span class="stat-label"> Уровень</span>
+            <div class="stat-row">
+                <span class="stat-name"> Здоровье</span>
                 <span class="stat-value"></span>
             </div>
-            <div class="stat-item">
-                <span class="stat-label"> Сила</span>
+            <div class="stat-row">
+                <span class="stat-name"> Сила</span>
                 <span class="stat-value"></span>
             </div>
-            <div class="stat-item">
-                <span class="stat-label"> Защита</span>
+            <div class="stat-row">
+                <span class="stat-name"> Защита</span>
                 <span class="stat-value"></span>
             </div>
+            <div class="stat-row">
+                <span class="stat-name"> Уровень</span>
+                <span class="stat-value"></span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-name"> Опыт</span>
+                <span class="stat-value"></span>
+            </div>
+            <div class="progress-bar">
 
-        </div>
-
-        <div class = "panel location-panel">
+            </div>
+            <div class="inventory">
+                <h2> Инвентарь </h2>
+                <div class="inventory-items">
+                    <p>Инвентарь пуст</p>
+                </div>
+            </div>
+        </section>
+        <section class="panel location">
             <h2>Локация</h2>
-            <div class="location">
+            <div class="location-desc">
+                Вы стоите на опушке таинственного леса. Деревья здесь высокие и древние,
+                а воздух наполнен запахом хвои и чего-то неизведанного.
+            </div>
+            <div class="location-actions">
+                <button>Идти вглубь леса</button>
+                <button>Исследовать старую хижину</button>
+            </div>
+            <div class="enemy-container">
 
             </div>
-            <div class="action">
-
+        </section>
+        <section class="panel actions">
+            <h2>Действия</h2>
+            <div class="action-buttons">
+                <button>Искать предметы</button>
+                <button>Отдохнуть</button>
             </div>
-
-        </div>
-
-        <div class = "panel">
-            <h2>Лог игры</h2>
-
-        </div>
-
-    </div>
-
+        </section>
+        <section class="panel log">
+            <h2>Журнал событий</h2>
+            <div class="log-entry">
+                Добро пожаловать в мир приключений! Вы стоите у входа в таинственный лес.
+            </div>
+            <button class="reset-btn">
+                Сбросить игру
+            </button>
+        </section>
 </body>
 </html>
