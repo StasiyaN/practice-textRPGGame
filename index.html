@@ -13,73 +13,77 @@
     <script src="index.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>RPG Game</h1>
-        </header>
-        <section class = "panel stats">
-            <h2>Персонаж</h2>
-            <div class="stat-row">
-                <span class ="stat-name">Имя</span>
-                <span class="stat-value" id="char-name"></span>
+<div class="container">
+    <header>
+        <h1>Приключения в Фантастическом мире</h1>
+    </header>
+
+    <section class="panel stats">
+        <h2>Статистика персонажа</h2>
+        <div class="stat-row">
+            <span class="stat-name">Имя:</span>
+            <span class="stat-value" id="char-name">-</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-name">Здоровье:</span>
+            <span class="stat-value" id="char-health">-</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-name">Сила:</span>
+            <span class="stat-value" id="char-strength">-</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-name">Защита:</span>
+            <span class="stat-value" id="char-defense">-</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-name">Уровень:</span>
+            <span class="stat-value" id="char-level">-</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-name">Опыт:</span>
+            <span class="stat-value" id="char-exp">-</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-bar-fill" id="exp-bar"></div>
+        </div>
+
+        <div class="inventory">
+            <h2>Инвентарь</h2>
+            <div class="inventory-items" id="inventory">
+                <!-- Предметы будут добавляться сюда -->
             </div>
-            <div class="stat-row">
-                <span class="stat-name">Здоровье</span>
-                <span class="stat-value" id="char-health"></span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-name">Сила</span>
-                <span class="stat-value" id="char-strength"></span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-name">Защита</span>
-                <span class="stat-value" id="char-defence"></span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-name">Уровень</span>
-                <span class="stat-value" id="char-level"></span>
-            </div>
-            <div class="stat-row">
-                <span class="stat-name">Опыт</span>
-                <span class="stat-value" id="char-exp"></span>
-            </div>
-            <div class="progress-bar">
-                <div class="progress-bar-fill" id="exp-bar"></div>
-            </div>
-            <div class="inventory">
-                <h2> Инвентарь </h2>
-                <div class="inventory-items" id="inventory">
-                    <p>Инвентарь пуст</p>
-                </div>
-            </div>
-        </section>
-        <section class="panel location">
-            <h2>Локация</h2>
-            <div class="location-desc">
-                Вы стоите у входа в таинственный мир приключений...
-            </div>
-            <div class="location-actions" id="location-actions">
-                <!-- Кнопки действий для локации будут добавляться сюда -->
-            </div>
-            <div id="enemy-container">
-                <!-- Враг будет отображаться здесь при встрече -->
-            </div>
-        </section>
-        <section class="panel actions">
-            <h2>Действия</h2>
-            <div class="action-buttons" id="action-buttons">
-                <!-- Кнопки действий будут добавляться сюда -->
-            </div>
-        </section>
-        <section class="panel log">
-            <h2>Журнал событий</h2>
-            <div class="log-content" id="log-content">
-                !-- Записи журнала будут добавляться сюда -->
-                </div>
-                <button class="reset-btn" id="reset-btn">
-                    Сбросить игру
-                </button>
-            </div>
-        </section>
+        </div>
+    </section>
+
+    <section class="panel location">
+        <h2>Локация</h2>
+        <div class="location-desc" id="location-desc">
+            Вы стоите у входа в таинственный мир приключений...
+        </div>
+        <div class="location-actions" id="location-actions">
+            <!-- Кнопки действий для локации будут добавляться сюда -->
+        </div>
+        <div id="enemy-container">
+            <!-- Враг будет отображаться здесь при встрече -->
+        </div>
+    </section>
+
+    <section class="panel actions">
+        <h2>Действия</h2>
+        <div class="action-buttons" id="action-buttons">
+            <!-- Кнопки действий будут добавляться сюда -->
+        </div>
+    </section>
+
+    <section class="panel log">
+        <h2>Журнал событий</h2>
+        <div class="log-content" id="log-content">
+            <!-- Записи журнала будут добавляться сюда -->
+        </div>
+        <button class="reset-btn" id="reset-btn">Сбросить игру</button>
+    </section>
+
+
 </body>
 </html>

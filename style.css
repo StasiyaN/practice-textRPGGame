@@ -37,14 +37,13 @@ header{
     border-radius: 10px;
     margin-bottom: 20px;
     width: 100%;
-    opacity: 0.5;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 h1{
     font-size: 40px;
     text-align: center;
-    color: rgba(159, 119, 148, 0.89);
+    color: #fff;
 }
 
 .panel{
@@ -105,7 +104,11 @@ h2{
     gap: 20px;
 }
 
-/*todo: css for items*/
+.item {
+    background: #dd3e54;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6be585, #dd3e54);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6be585, #dd3e54); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
 .location-desc {
     margin-bottom: 30px;
 }
@@ -131,9 +134,8 @@ button {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold;
     transition: all 0.4s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);*/
 }
 button:hover {
     scale: 1.05;
@@ -245,4 +247,30 @@ button:hover {
     background: linear-gradient(90deg, #00cc00, #66ff66);
     transition: width 0.5s ease;
 }
+/*MQ*/
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                    "header"
+                    "stats"
+                    "location"
+                    "actions"
+                    "log"
+                    "footer";
+    }
+}
 
+@media (max-width: 480px) {
+    .container {
+        max-width: 600px;
+
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        max-width: 320px;
+
+    }
+}

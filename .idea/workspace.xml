@@ -30,6 +30,9 @@
     &quot;accountId&quot;: &quot;5929ce14-da0e-4605-9531-a352a3a56141&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -50,6 +53,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -70,7 +74,7 @@
       <updated>1759385799794</updated>
       <workItem from="1759385800865" duration="3603000" />
       <workItem from="1759484172303" duration="71000" />
-      <workItem from="1759652399349" duration="6525000" />
+      <workItem from="1759652399349" duration="11745000" />
     </task>
     <servers />
   </component>
